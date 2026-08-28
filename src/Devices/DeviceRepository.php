@@ -143,7 +143,7 @@ final class DeviceRepository
             $result = $send();
             if ($result->invalidDestination) {
                 $now = Carbon::now('UTC')->format('Y-m-d H:i:s.u');
-                $this->storage->table('devices')->where('id',$row->id)->update(['enabled' => false, 'invalidated_at' => $now, 'updated_at' => $now]);
+                $this->storage->table('devices')->where('id', $row->id)->update(['enabled' => false, 'invalidated_at' => $now, 'updated_at' => $now]);
             }
 
             return $result;

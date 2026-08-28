@@ -150,8 +150,8 @@ class ExternalIntegrationTest extends TestCase
         $result = Notify::make('batch')->title('T')->message('M')->recipients($owners)->channels(['mqtt'])->send();
         self::assertSame(150, $result->recipientCount);
         self::assertSame(150, app(Storage::class)->table('notifications')->count());
-        self::assertSame(150, app(Storage::class)->table('deliveries')->where('channel','mqtt')->where('status','sent')->count());
-        self::assertCount(150,$this->mqtt->sent);
-        self::assertCount(150,$this->broadcast->messages);
+        self::assertSame(150, app(Storage::class)->table('deliveries')->where('channel', 'mqtt')->where('status', 'sent')->count());
+        self::assertCount(150, $this->mqtt->sent);
+        self::assertCount(150, $this->broadcast->messages);
     }
 }

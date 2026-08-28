@@ -70,6 +70,6 @@ try {
     }
     fwrite(STDOUT, "Transport accepted the test message. Subscriber rendering, delivery and read are NOT verified.\n");
 } catch (Throwable) {
-    fwrite(STDERR,"Live profile failed. No credentials or provider exception details are printed.\n");
+    fwrite(STDERR, "Live profile failed. No credentials or provider exception details are printed.\n");
     exit(1);
 }

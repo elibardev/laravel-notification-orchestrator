@@ -313,7 +313,8 @@ Local closure evidence (2026-08-28): composer check passed on Herd PHP 8.2.31;
 93 tests / 464 assertions, also passing in random order with seed 828; PHPStan
 level 8 (168 files) and Pint passed. All six Node tests and Composer platform
 requirements passed. All four migration stubs passed PHP lint, and 73 Markdown
-files had no broken relative links. Remote CI was not run.
+files had no broken relative links. Remote CI had not run at this phase boundary;
+the subsequent private GitHub upload and CI checks are recorded in TESTING.md.
 Composer audit initially failed on Packagist DNS; a second online
 `herd composer audit --locked` completed with no security vulnerability advisories.
 
@@ -330,8 +331,8 @@ probe. Provider failures use sanitized messages, structured dispatch/correlation
 IDs and existing delivery lifecycle events. Applications may translate those
 events into their monitoring system; no Prometheus/OTel dependency is added.
 
-The verified database engine is SQLite. MySQL/MariaDB/PostgreSQL and remote CI
-runs are not claimed. The SQL uses Laravel schema/query abstractions, but a target
+The verified database engine is SQLite. MySQL/MariaDB/PostgreSQL are not claimed
+as verified. The SQL uses Laravel schema/query abstractions, but a target
 deployment must validate its engine, index limits, permissions and queue worker.
 The after-commit crash window and provider-accepted-before-tracking crash window
 remain documented limitations. No outbox or exactly-once guarantee is introduced.

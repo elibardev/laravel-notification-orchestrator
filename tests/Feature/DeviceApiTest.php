@@ -84,6 +84,6 @@ class DeviceApiTest extends TestCase
         $kernel->call('notifications:prune', ['--only' => 'devices', '--dry-run' => true]);
         self::assertSame(1, app(Storage::class)->table('devices')->count());
         $kernel->call('notifications:prune', ['--only' => 'devices']);
-        self::assertSame(0,app(Storage::class)->table('devices')->count());
+        self::assertSame(0, app(Storage::class)->table('devices')->count());
     }
 }

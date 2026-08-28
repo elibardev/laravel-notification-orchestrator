@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+### Fixed
+
+- Corrected seven PHP style issues found by the first GitHub Actions run and
+  reproduced locally with a fresh Pint cache. No behavior or contract changes.
+
 ### Removed
 
 - Removed the unused Phase 1 `UnavailableExecutor` placeholder and its
@@ -10,6 +15,9 @@
 
 ### Added
 
+- Spanish Codex consumer guide covering package capabilities, package-versus-host
+  change boundaries, table naming, integration, realtime centralization,
+  reconnection, diagnostics and application design recommendations.
 - Phase 3: Laravel Mail, provider-neutral Push with FCM HTTP v1/Google Auth,
   encrypted managed devices and authenticated device endpoints.
 - MQTT personal/context transport, private Laravel broadcast contexts, optional

@@ -141,6 +141,6 @@ class MailMqttPresenceTest extends TestCase
         app()->instance(MqttClientFactory::class, $factory);
         $client->expects(self::once())->method('publish')->with('records/1', '{}', 0, false);
         $client->expects(self::never())->method('loop');
-        app(PhpMqttDriver::class)->publish('records/1','{}',0,false);
+        app(PhpMqttDriver::class)->publish('records/1', '{}', 0, false);
     }
 }

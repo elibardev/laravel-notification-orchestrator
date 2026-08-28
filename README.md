@@ -162,6 +162,7 @@ These identifiers are accepted for the initial development line.
 -   [Configuration specification](docs/CONFIGURATION.md)
 -   [Database design](docs/DATABASE.md)
 -   [Public API design](docs/PUBLIC-API.md)
+-   [Codex consumer integration guide](docs/CODEX-CONSUMER-INTEGRATION.md)
 -   [Realtime design](docs/REALTIME.md)
 -   [Push and devices](docs/PUSH-DEVICES.md)
 -   [Security model](docs/SECURITY.md)

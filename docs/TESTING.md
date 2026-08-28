@@ -17,7 +17,12 @@ historical PHP 8.3 checks below are not a claim about this phase.
 Browser evidence and the local Laravel fixture are documented in [PHASE-2.md](PHASE-2.md).
 External clients are controlled test doubles; Google Auth signs real disposable
 test JWTs but its HTTP exchange is simulated. SQLite is the verified database.
-Remote CI, other SQL engines and live SMTP/FCM/Mosquitto/Reverb were not exercised.
+Other SQL engines and live SMTP/FCM/Mosquitto/Reverb were not exercised.
+GitHub Actions is now active for the private repository. Its first run on Linux
+PHP 8.2.33 passed all 93 PHP tests and PHPStan, but found seven style issues that
+the local Pint cache had missed. These were reproduced with a fresh cache and
+corrected without changing behavior. Check [GitHub Actions](https://github.com/elibardev/laravel-notification-orchestrator/actions)
+for the result of each commit; do not infer a remote pass from local checks.
 See [PHASE-3.md](PHASE-3.md) for separate opt-in live profiles and deployment limits.
 No live credentials or test keys are committed.
 Final `herd composer audit --locked` completed without vulnerability advisories

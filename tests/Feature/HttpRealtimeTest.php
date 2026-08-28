@@ -111,6 +111,6 @@ class HttpRealtimeTest extends TestCase
         self::assertSame(1, app(NotificationRepository::class)->unreadCount($a));
         $this->broadcast->fail = true;
         $this->actingAs($a)->patchJson('/api/notifications/'.$id.'/read')->assertOk();
-        $this->getJson('/api/notifications/bootstrap')->assertJsonPath('meta.unread_count',0)->assertJsonPath('notifications.0.state.read',true);
+        $this->getJson('/api/notifications/bootstrap')->assertJsonPath('meta.unread_count', 0)->assertJsonPath('notifications.0.state.read', true);
     }
 }
