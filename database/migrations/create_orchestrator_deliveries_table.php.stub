@@ -1,0 +1,8 @@
+<?php
+declare(strict_types=1);
+use Elibardev\NotificationOrchestrator\Persistence\PackageSchema;
+use Illuminate\Database\Migrations\Migration;
+return new class extends Migration {
+    public function up(): void { app(PackageSchema::class)->create('deliveries'); }
+    public function down(): void { app(PackageSchema::class)->drop('deliveries'); }
+};
